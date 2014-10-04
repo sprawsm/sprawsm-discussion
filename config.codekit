@@ -22,6 +22,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/sprawsm-discuss.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/sprawsm-discuss.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/demo.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -66,10 +75,10 @@
 		"outputAbbreviatedPath": "\/build\/sprawsm-discuss.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 2,
-		"relativeURLS": 1,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
