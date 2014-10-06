@@ -8,7 +8,7 @@
 
     // Append the stylesheet
 
-    $('head').append('<link rel="stylesheet" href="./build/sprawsm-discuss.css" type="text/css" />');
+    $('head').append('<link rel="stylesheet" href="'+sd_path+'" type="text/css" />');
 
     // Append the markup
 
