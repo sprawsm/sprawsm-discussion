@@ -8,17 +8,33 @@
   left: 100%;
   right: 0;
   z-index: 999;
-  width: 40%;
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
   background-color: #fff;
   transition: all .15s ease;
 }
 .sd-container.show {
-  left: 60%;
+  left: 0;
   border-radius: 0;
   border-color: #000;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 992px) {
+  .sd-container {
+    width: 60%;
+  }
+  .sd-container.show {
+    left: 40%;
+  }
+}
+@media (min-width: 1280px) {
+  .sd-container {
+    width: 40%;
+  }
+  .sd-container.show {
+    left: 60%;
+  }
 }
 .sd-controls {
   width: 30px;
@@ -26,14 +42,25 @@
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 1000;
   transition: all .25s ease;
 }
 .sd-controls.open {
-  right: 40%;
+  right: 10px;
   margin-right: 10px;
 }
 .icon-discussion {
   fill: #000000;
+}
+@media (min-width: 992px) {
+  .sd-controls.open {
+    right: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  .sd-controls.open {
+    right: 40%;
+  }
 }
 .sd-counter {
   position: absolute;
