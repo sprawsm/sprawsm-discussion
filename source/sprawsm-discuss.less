@@ -2,20 +2,36 @@
 /* Use this code freely, but acknowledge the authorship in the comment above */
 /* Contact: dragan@sprawsm.com                                               */
 
+
+// Variables
+// --------------------
+
+@toggle-color:    #fff;
+@toggle-bg:       #000;
+@toggle-hover-bg: #0432ff;
+
+@counter-bg:      #fff;
+@counter-color:   #000;
+@counter-border:  @toggle-bg;
+@counter-hover-border:  @toggle-hover-bg;
+
+@panel-width:     40%;
+
 // Container
 // --------------------
 
-.sprawsm-discuss-container {
+.sd-container {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 100%;
   right: 0;
   z-index: 999;
+  width: @panel-width;
   padding: 10px;
   box-sizing: border-box;
   background-color: #fff;
-  transition: all .25s ease;
+  transition: all .15s ease;
 
   // Open state
   &.show {
@@ -28,14 +44,66 @@
 }
 
 
-// Toggle link
+// Controls
 // --------------------
 
-.sprawsm-discuss-toggle {
+.sd-controls {
+  width: 30px;
+  height: 30px;
   position: fixed;
   bottom: 10px;
   right: 10px;
   transition: all .25s ease;
+
+  // Open state
+  &.open {
+    right: 40%;
+    margin-right: 10px;
+  }
+
+}
+
+.icon-discussion {
+  fill: @toggle-bg;
+}
+
+// Comment counter
+// --------------------
+
+.sd-counter {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  height: 17px;
+  min-width: 17px;
+  padding: 0 3px;
+  text-align: right;
+  box-sizing: border-box;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  background: @counter-bg;
+  border: 2px solid @counter-border;
+  color: @counter-color;
+  text-decoration: none;
+  border-radius: 13px;
+
+  &:hover,
+  &.hover {
+    border-color: @counter-hover-border;
+  }
+
+}
+
+// Toggle link
+// --------------------
+
+.sd-toggle {
+  display: block;
 
   > svg {
     display: block;
@@ -45,29 +113,22 @@
     display: none;
   }
 
-  // Open state
-  &.open {
-    right: 40%;
-    margin-right: 10px;
-  }
-
   &:focus,
-  &:hover {
+  &:hover,
+  &.hover {
     
     .icon-discussion {
-      fill: blue;
+      fill: @toggle-hover-bg;
     }
 
   }
 
 }
 
-
-// Toggle link
+// Discussion pane content
 // --------------------
 
-.sprawsm-discuss-content {
-  min-width: 400px; // todo
+.sd-content {
 
   // Open state
   .show & {
