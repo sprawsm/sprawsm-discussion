@@ -69,23 +69,21 @@
 
       <div class="col cs-10 lead">
         <h1>Sprawsm Discussion</h1>
-        <p>The idea for this <em>hack</em> came about when we got tired of discussing designs in disconnected apps, like Basecamp. We wanted our customers to be able to provide feedback while they are looking at the mockup itself. </p>
+        <p>The idea for this <em>hack</em> came about when we got tired of discussing designs in disconnected apps such as Basecamp and the like. We wanted our customers to be able to provide feedback on our designs while they are looking at the mockup itself. </p>
       </div>
 
       <div class="col cs-8">
 
-        <p><a href="http://disqus.com/">Disqus</a> comments seemed like a perfect solutions to this as they are easily embeddable, and allow image attachments which are indispensable when you are trying to get your point across. </p>
+        <p><a href="http://disqus.com/">Disqus</a> comments seemed like a perfect solution to this as they are easily embeddable, and allow image attachments which are indispensable when you are trying to get your point across. </p>
         <p>Of course the use of this little widget isn't limited to design discussions. Feel free to use it however you see fit. </p>
-
         <h2>How To Use</h2>
         <h3>1. Set Up Disqus</h3>
         <p>First of all, you will need a <a href="http://disqus.com/">Disqus</a> account. We recommend opening a separate account tied to your company email. </p>
         <p>Next thing you need to do is to <a href="https://disqus.com/admin/create/">register a site</a> with them, which basically means you are setting up the comments backend for the project you want to include the comments in. You only need to register one site, and you can use the same embed code on as many pages as you'd like. </p>
-        <p>Feel free to name the site however you'd like, we usually go with “[project_name] Design Discussion”. This is totally irrelevant. </p>
-        <p>Than you will get a chance to choose your site's Disqus URL, which is <strong>very important</strong> and you need to remember it. The Disqus folks also call it “site shortname”. </p>
-        <p>You are also able to choose a category but that's largely irrelevant for this use case. </p>
-        <p>At this point you are pretty much all set since all we really need is the site shortname, but let's check out some other settings of the newly created discussion site. </p>
-        <p>In your Disqus site settings you will be able to adjust some settings to your liking, and we suggest you take notice of the following options (all in the General category): </p>
+        <p>Feel free to name the site however you'd like, we usually go with “[project_name] Design Discussion”. This is totally up to you. </p>
+        <p>Then you will get a chance to choose your site's Disqus URL, which is <strong>very important</strong> and you need to remember it. The Disqus folks also call it “site shortname”. You are also able to choose a category but that's largely irrelevant for this use case. </p>
+        <p>At this point you are pretty much all set since all we really need is the site shortname, but let's check out some other settings of the newly created Disqus site. </p>
+        <p>We suggest you take notice of the following options (all in the General category): </p>
         <ol>
         <li>Set the <strong>default sorting</strong> to <em>newest first</em> </li>
         <li><em>Uncheck</em> the <strong>discovery</strong> option (you probably don't want people finding your discussions randomly) </li>
@@ -94,8 +92,8 @@
         </ol>
         <h3>2. Embed the Code</h3>
         <p>Getting the comments into your mockup pages is really easy. We are going to assume that you are using this for an HTML mockup/template, but if you'd like to use it for image-based mockups all you need to do is create a web page containing your mockup as an image, than embed the code into that page. </p>
-        <p>First thing's first: <a href="https://github.com/sprawsm/sprawsm-discussion">download the package of check it out from GitHub</a> (look for the “Download ZIP” button). Once you've done that, unzip the archive and you will find the demo page, and the folder called “build”. This folder contains the files that we need. </p>
-        <p>Before we move to the embed code, you need to make sure you have the latest version of <a href="http://jquery.com/">jQuery</a> included. If you don't feel free to paste this line of code directly before the closing <code>body</code> tag of your mockup HTML page: </p>
+        <p>First thing's first: <a href="https://github.com/sprawsm/sprawsm-discussion">download the package of check it out from GitHub</a> (look for the “Download ZIP” button). Once you've done that, unzip the archive and you will find the demo page, and the folder called “build”. This folder contains the files that we need. Alternatively skip to the “File Hosting” section of this page and grab the links to the files we are hosting publicly.</p>
+        <p>Before we move to the embed code, you need to make sure you have the latest version of <a href="http://jquery.com/">jQuery</a> included. If you don't, feel free to paste this line of code directly before the closing <code>body</code> tag of your mockup HTML page: </p>
         <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
         </code></pre>
         <p>Next thing you need to do is take the following code and paste it into your mockup HTML page also right before the closing <code>body</code> tag, but <strong>after</strong> the jQuery include: </p>
@@ -129,7 +127,7 @@
         <pre><code>var sd_path = 'path/to/build/sprawsm-discuss.css'
         </code></pre>
         <p>This is the style sheet that adds the design to the whole thing. It's important to note that this path should be either absolute, or if you're using a relative path, make sure it is relative to the jquery.sprawsm-discuss.min.js file, and <strong>not</strong> your HTML page. </p>
-        <p>If you've done everything correctly, your somment should load without a problem.</p>
+        <p>If you've done everything correctly, you should be able to see the comment icon in the lower right corner of your browser widow, and the discussion should load without a problem.</p>
         <h3>File Hosting</h3>
         <p>If you don't have a web server or simply don't want to go through the hassle of hosting the files yourself, feel free to link directly to the files hosted by us: </p>
         <p>jquery.sprawsm-discuss.min.js: </p>
@@ -138,7 +136,8 @@
         <p>sprawsm-discuss.css: </p>
         <pre><code>https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css
         </code></pre>
-        <h1>Terms of Usage</h1>
+        <p>The benefits of hosting the files yourself is the ability to modify the files, change the design, etc. </p>
+        <h1>Terms of Use</h1>
         <p>This code is provided as-is, without any warranty or guarantees. Sprawsm doo can not be held responsible for any damage or breach of privacy you may face by using this code. Sprawsm doo is not affiliated with Disqus in any way, we just like their awesome product. </p>
 
       </div>
