@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).scroll(function(){$(this).scrollTop()>50&&$(".hero").addClass("scrolled")}),$(window).scroll(function(){$(this).scrollTop()<50&&$(".hero").removeClass("scrolled")})});

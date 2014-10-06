@@ -1,0 +1,226 @@
+@import 'demo.layout.css';
+@import 'demo.typography.css';
+
+// ==========================================================================
+// Generals
+// ==========================================================================
+
+html {}
+  
+  body {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+// Helper classes
+
+.clear:before,
+.clear:after { content: ""; display: table; }
+.clear:after { clear:both;                  }
+
+.rel {
+  position: relative;
+}
+
+.center-v {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lead {
+  font-size: 24px;
+  font-weight: 100;
+
+  > h1 {
+    font-size: 48px;
+  }
+
+}
+
+// ==========================================================================
+// Links
+// ==========================================================================
+
+a:link,
+a:visited {
+  color: #c542ef;
+  transition: all .25s ease;
+}
+
+a:focus,
+a:hover {
+  color: #6f43ef;
+  text-decoration: none;
+}
+
+a:active {}
+
+
+// ==========================================================================
+// Headings
+// ==========================================================================
+
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 50px 0;
+  padding-top: 50px;
+  border-top: 2px solid #A682F5;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  height: 100vh;
+  margin-bottom: 100px;
+  color: #fff;
+  background-image: linear-gradient(to right bottom, #A682F5 0%, #9EDBFF 100%);
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute; bottom: 50px; right: 50px;
+    width: 121px;
+    height: 64px;
+    background: url(cta.png) 0 0 no-repeat;
+    background-size: 121px;
+    height: 64px;
+    transition: .5s opacity;
+  }
+
+  &.scrolled:after {
+    opacity: 0;
+  }
+
+}
+
+.hero-info {
+  margin-top: 50px;
+  font-size: 14px;
+  text-align: right;
+  height: 22px;
+  line-height: 22px;
+
+  > a:link,
+  > a:visited {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  > a:focus,
+  > a:hover {
+    padding-bottom: 3px;
+    border-color: transparent;
+  }
+
+  .logo-sprawsm:link,
+  .logo-sprawsm:visited {
+    position: relative;
+    top: 4px;
+    border: none;
+  }
+
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.hero-text {
+  font-weight: 100;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 28px;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+body > footer {}
+
+
+/* ==========================================================================
+   Primary content
+   ========================================================================== */
+
+.primary {}
+
+
+/* ==========================================================================
+   Secondary content
+   ========================================================================== */
+
+.secondary {}
+
+
+/* ==========================================================================
+   Breakpoint: 800px
+   ========================================================================== */
+
+@media only screen and (max-width: 800px) {
+  /* Your code here */
+}
+
+
+/* ==========================================================================
+   Breakpoint: 480px
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+  /* Your code here */
+}
+
+
+/* ==========================================================================
+   Target high DPI devices
+   Source URI: https://gist.github.com/3446599 
+   ========================================================================== */
+
+/* ---------------------------------------------------------- */
+/*                                                            */
+/* A media query that captures:                               */
+/*                                                            */
+/* - Retina iOS devices                                       */
+/* - Retina Macs running Safari                               */
+/* - High DPI Windows PCs running IE 8 and above              */
+/* - Low DPI Windows PCs running IE, zoomed in                */
+/* - Low DPI Windows PCs and Macs running Firefox, zoomed in  */
+/* - Android hdpi devices and above                           */
+/* - Android tvdpi devices, including Google Nexus 7          */
+/* - Chrome running on high DPI Macs and PCs                  */
+/* - Opera running on high DPI Macs, PCs and mobile devices   */
+/*                                                            */
+/* Please note that that this code assumes you'll swap a      */
+/* 2× version of your images. If you'd like to supply         */
+/* finer increments, other thresholds might be appropriate.   */
+/*                                                            */
+/* A test for CSS pixel densites can be found here:           */
+/* http://bjango.com/articles/min-device-pixel-ratio/         */
+/*                                                            */
+/*                                  @marcedwards from @bjango */
+/*                                                            */
+/* ---------------------------------------------------------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
+       only screen and (-o-min-device-pixel-ratio: 13/10),
+       only screen and (min-resolution: 120dpi) {
+  /* Your code here */
+}
