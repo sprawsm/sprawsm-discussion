@@ -95,7 +95,7 @@ The benefits of hosting the files yourself is the ability to modify the files, c
 Terms of Use
 ==============
 
-This code is provided as-is, without any warranty or guarantees. Sprawsm doo can not be held responsible for any damage or breach of privacy you may face by using this code. Sprawsm doo is not affiliated with Disqus in any way, we just like their awesome product. 
+This code is provided as-is, without any warranty or guarantees. Sprawsm doo can not be held responsible for any damage or potential breach of privacy you may face by using this code. Sprawsm doo is not affiliated with Disqus in any way, we just like their awesome product. 
 
 [1]: http://disqus.com/
 [2]: https://disqus.com/admin/create/

@@ -68,7 +68,7 @@
     <article class="main-content grid">
 
       <div class="col cs-10 lead">
-        <h1>Sprawsm Discussion</h1>
+        <h2>Sprawsm Discussion</h2>
         <p>The idea for this <em>hack</em> came about when we got tired of discussing designs in disconnected apps such as Basecamp and the like. We wanted our customers to be able to provide feedback on our designs while they are looking at the mockup itself. </p>
       </div>
 
@@ -76,7 +76,6 @@
 
         <p><a href="http://disqus.com/">Disqus</a> comments seemed like a perfect solution to this as they are easily embeddable, and allow image attachments which are indispensable when you are trying to get your point across. </p>
         <p>Of course the use of this little widget isn't limited to design discussions. Feel free to use it however you see fit. </p>
-        <h2>How To Use</h2>
         <h3>1. Set Up Disqus</h3>
         <p>First of all, you will need a <a href="http://disqus.com/">Disqus</a> account. We recommend opening a separate account tied to your company email. </p>
         <p>Next thing you need to do is to <a href="https://disqus.com/admin/create/">register a site</a> with them, which basically means you are setting up the comments backend for the project you want to include the comments in. You only need to register one site, and you can use the same embed code on as many pages as you'd like. </p>
@@ -97,23 +96,22 @@
         <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
         </code></pre>
         <p>Next thing you need to do is take the following code and paste it into your mockup HTML page also right before the closing <code>body</code> tag, but <strong>after</strong> the jQuery include: </p>
-        <pre><code>    &lt;script type="text/javascript" src="path/to/build/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;
+        <pre><code>&lt;script type="text/javascript" src="path/to/build/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;
 
-            &lt;script type="text/javascript"&gt;
+  &lt;script type="text/javascript"&gt;
 
-            // Your Disqus site shortname
-            var disqus_shortname = 'yourshortname';
+  // Your Disqus site shortname
+  var disqus_shortname = 'yourshortname';
 
-            // Unique discussion ID
-            var disqus_identifier = 'yourdiscussionid';
+  // Unique discussion ID
+  var disqus_identifier = 'yourdiscussionid';
 
-            // Path to stylesheet 
-            // If you are using a relative path, make sure it's relative to 
-            // jquery.sprawsm-discuss.js file and not this document
-            var sd_path = 'path/to/build/sprawsm-discuss.css'
+  // Path to stylesheet 
+  // If you are using a relative path, make sure it's relative to 
+  // jquery.sprawsm-discuss.js file and not this document
+  var sd_path = 'path/to/build/sprawsm-discuss.css'
 
-        &lt;/script&gt;
-        </code></pre>
+&lt;/script&gt;</code></pre>
         <p>Let's take a moment to analyze the lines you will need to edit: </p>
         <pre><code>&lt;script type="text/javascript" src="path/to/build/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;
         </code></pre>
@@ -137,12 +135,16 @@
         <pre><code>https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css
         </code></pre>
         <p>The benefits of hosting the files yourself is the ability to modify the files, change the design, etc. </p>
-        <h1>Terms of Use</h1>
-        <p>This code is provided as-is, without any warranty or guarantees. Sprawsm doo can not be held responsible for any damage or breach of privacy you may face by using this code. Sprawsm doo is not affiliated with Disqus in any way, we just like their awesome product. </p>
 
       </div>
 
     </article> <!-- .main-content -->
+
+    <footer class="page-footer grid">
+      <div class="col cs-6">
+        <p>This code is provided as-is, without any warranty or guarantees. Sprawsm doo can not be held responsible for any damage or potential breach of privacy you may face by using this code. Sprawsm doo is not affiliated with Disqus in any way, we just like their awesome product. </p>
+      </div>
+    </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
