@@ -80,7 +80,15 @@ h3 {
   height: 100vh;
   margin-bottom: 100px;
   color: #fff;
-  background-image: linear-gradient(to right bottom, #A682F5 0%, #9EDBFF 100%);
+  // background-image: linear-gradient(to right bottom, #A682F5 0%, #9EDBFF 100%);
+  background-image: linear-gradient(321deg, #a682f5, #9edbff, #6ad6cc, #99d170, #e9c150);
+  background-size: 1000% 1000%;
+  animation: hero-gradient 30s ease infinite;
+  @keyframes hero-gradient { 
+      0%   { background-position: 0%   10% }
+      50%  { background-position: 100% 91% }
+      100% { background-position: 0%   10% }
+  }
 
   &:after {
     content: "";
