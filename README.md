@@ -1,9 +1,11 @@
-Sprawsm Discussion 
-==================
+Superawesøme Design Discussions
+===============================
 
-The idea for this *hack* came about when we got tired of discussing designs in disconnected apps such as Basecamp and the like. We wanted our customers to be able to provide feedback on our designs while they are looking at the mockup itself. 
+The idea for this *hack* came about when we got tired of discussing designs with our customers in disconnected apps such as Basecamp and the like. We wanted our customers to be able to provide feedback on our designs while they are looking at the mockup itself.
 
 [Disqus][1] comments seemed like a perfect solution to this as they are easily embeddable, and allow image attachments which are indispensable when you are trying to get your point across. 
+
+We simply enhanced the presentation and behavior of Disqus comments with some simple jQuery code so that it's out of the way most of the time, but you can bring it up whenever you want to post a thought, or see what others wrote. 
 
 Of course the use of this little widget isn't limited to design discussions. Feel free to use it however you see fit. 
 
@@ -82,11 +84,11 @@ If you've done everything correctly, you should be able to see the comment icon 
 
 If you don't have a web server or simply don't want to go through the hassle of hosting the files yourself, feel free to link directly to the files hosted by us: 
 
-jquery.sprawsm-discuss.min.js: 
+The line of HTML needed to embed the JavaScript file: 
 
-    https://s3.amazonaws.com/sprawsm/sprawsm-discussion/jquery.sprawsm-discuss.min.js 
+    <script type="text/javascript" src="https://s3.amazonaws.com/sprawsm/sprawsm-discussion/jquery.sprawsm-discuss.min.js"></script>
 
-sprawsm-discuss.css: 
+The path to the stylesheet: 
 
     https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css
 
