@@ -57,7 +57,7 @@
           <div class="hero-content">
             <h1 class="hero-title">What better place to discuss a design than directly inside it?</h1>
             <div class="hero-text">
-              <p>Superawesøme came up with a simple way to utilize a free comment platform Disqus in order to provide a simple way to discuss designs with others, such as your colleagues and customers.</p>
+              <p>Superawesøme came up with a simple way to utilize a free comment platform Disqus in order to provide a simple way to discuss mockups with your colleagues and customers.</p>
               <p>You can start using it today, for free.</p>
             </div>
             <div class="hero-action">
@@ -72,36 +72,63 @@
 
     <article class="main-content grid">
 
-      <div class="col cs-10 lead">
-        <h2>Superawesøme Design Discussions</h2>
-        <p>The idea for this <em>hack</em> came about when we got tired of discussing designs with our customers in disconnected apps such as Basecamp and the like. We wanted our customers to be able to provide feedback on our designs while they are looking at the mockup itself. </p>
+      <div class="pad txtc vmargins-lg">
+        <h2>Why would you want this?</h2>
       </div>
 
-      <div class="col cs-8">
+      <div class="col cs-4 txtc">
+        <h3 class="heading">End the confusion.</h3>
+        <p>Remember the email where the customer mentioned the latest set of changes? Yeah, neither do we.</p>
+      </div>
 
+      <div class="col cs-4 txtc">
+        <h3 class="heading">Be productive.</h3>
+        <p>Having all design-related comments in one place saves you time. Time you can spend working.</p>
+      </div>
+
+      <div class="col cs-4 txtc">
+        <h3 class="heading">Embrace the simplicity.</h3>
+        <p>All it takes is a Disqus account, and a couple of lines of code anyone can copy and paste.</p>
+      </div>
+
+      <div class="pad clear"><hr class="vmargins-lg"></div>
+
+      <div class="col cs-8 skip-2">
+
+        <h2>Encourage feedback, don't look for it.</h2>
+        <p class="lead vmargins-md">Superawesøme design discussion is a very simple widget for your website that embeds a <a href="http://disqus.com/">Disqus</a> comment box, enabling your team or customers to leave feedback on your designs.</p>
+
+        <p>The main advantage of using this widget is that it encourages all design-related conversations to reside in a single place, directly on the mockup page.</p>
+        <p>The idea came about when we got tired of discussing designs with our customers in project management apps, or through email. Chasing down discussion threads and email messages was a waste of time, and we wanted our customers to be able to provide feedback right on the mockup itself. </p>
         <p><a href="http://disqus.com/">Disqus</a> comments seemed like a perfect solution to this as they are easily embeddable, and allow image attachments which are indispensable when you are trying to get your point across. </p>
         <p>We simply enhanced the presentation and behavior of Disqus comments with some simple jQuery code so that it's out of the way most of the time, but you can bring it up whenever you want to post a thought, or see what others wrote. </p>
         <p>Of course the use of this little widget isn't limited to design discussions. Feel free to use it however you see fit. </p>
-        <h3>1. Set Up Disqus</h3>
+
+        <h3>Enough explaining. Let's set it up!</h3>
+        
         <p>First of all, you will need a <a href="http://disqus.com/">Disqus</a> account. We recommend opening a separate account tied to your company email. </p>
         <p>Next thing you need to do is to <a href="https://disqus.com/admin/create/">register a site</a> with them, which basically means you are setting up the comments backend for the project you want to include the comments in. You only need to register one site, and you can use the same embed code on as many pages as you'd like. </p>
         <p>Feel free to name the site however you'd like, we usually go with “[project_name] Design Discussion”. This is totally up to you. </p>
         <p>Then you will get a chance to choose your site's Disqus URL, which is <strong>very important</strong> and you need to remember it. The Disqus folks also call it “site shortname”. You are also able to choose a category but that's largely irrelevant for this use case. </p>
         <p>At this point you are pretty much all set since all we really need is the site shortname, but let's check out some other settings of the newly created Disqus site. </p>
         <p>We suggest you take notice of the following options (all in the General category): </p>
-        <ol>
-        <li>Set the <strong>default sorting</strong> to <em>newest first</em> </li>
-        <li><em>Uncheck</em> the <strong>discovery</strong> option (you probably don't want people finding your discussions randomly) </li>
-        <li><em>Check</em> the <strong>guest commenting</strong> so your customers don't neet to register for a Disqus account in order to comment on your mockups </li>
-        <li>Make sure <strong>media attachments</strong> are <em>enabled</em> </li>
-        </ol>
-        <h3>2. Embed the Code</h3>
+        <ul>
+          <li>Set the <strong>default sorting</strong> to <em>newest first</em> </li>
+          <li><em>Uncheck</em> the <strong>discovery</strong> option (you probably don't want people finding your discussions randomly) </li>
+          <li><em>Check</em> the <strong>guest commenting</strong> so your customers don't neet to register for a Disqus account in order to comment on your mockups </li>
+          <li>Make sure <strong>media attachments</strong> are <em>enabled</em> </li>
+        </ul>
+        <h3>The Code</h3>
         <p>Getting the comments into your mockup pages is really easy. We are going to assume that you are using this for an HTML mockup/template, but if you'd like to use it for image-based mockups all you need to do is create a web page containing your mockup as an image, than embed the code into that page. </p>
-        <p>First thing's first: <a href="https://github.com/sprawsm/sprawsm-discussion">download the package of check it out from GitHub</a> (look for the “Download ZIP” button). Once you've done that, unzip the archive and you will find the demo page, and the folder called “build”. This folder contains the files that we need. Alternatively skip to the “File Hosting” section of this page and grab the links to the files we are hosting publicly.</p>
+        <p>There are two ways you can do this:</p>
+        <ol>
+          <li><a href="https://github.com/sprawsm/sprawsm-discussion">Download the package or check it out from GitHub</a> (look for the “Download ZIP” button). Go this route if you want to modify the code or restyle the widget.</li>
+          <li>Use our hosted version of the code (recommended).</li>
+        </ol>
         <p>Before we move to the embed code, you need to make sure you have the latest version of <a href="http://jquery.com/">jQuery</a> included. If you don't, feel free to paste this line of code directly before the closing <code>body</code> tag of your mockup HTML page: </p>
         <pre class="prettyprint"><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
         <p>Next thing you need to do is take the following code and paste it into your mockup HTML page also right before the closing <code>body</code> tag, but <strong>after</strong> the jQuery include: </p>
-        <pre class="prettyprint"><code>&lt;script type="text/javascript" src="path/to/build/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;
+        <pre class="prettyprint"><code>&lt;script type="text/javascript" src="https://s3.amazonaws.com/sprawsm/sprawsm-discussion/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;
 
   &lt;script type="text/javascript"&gt;
 
@@ -114,26 +141,19 @@
   // Path to stylesheet 
   // If you are using a relative path, make sure it's relative to 
   // jquery.sprawsm-discuss.js file and not this document
-  var sd_path = 'path/to/build/sprawsm-discuss.css'
+  var sd_path = 'https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css'
 
 &lt;/script&gt;</code></pre>
         <p>Let's take a moment to analyze the lines you will need to edit: </p>
-        <pre class="prettyprint"><code>&lt;script type="text/javascript" src="path/to/build/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;</code></pre>
-        <p>Make sure to input the correct path to the file <code>jquery.sprawsm-discuss.min.js</code>, depending where you have uploaded it on your webserver or hard drive. </p>
+        <pre class="prettyprint"><code>&lt;script type="text/javascript" src="https://s3.amazonaws.com/sprawsm/sprawsm-discussion/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;</code></pre>
+        <p>Make sure to input the correct path to the file <code>jquery.sprawsm-discuss.min.js</code>, depending where you have uploaded it on your webserver or hard drive. The example above includes the hosted version of the file.</p>
         <pre class="prettyprint"><code>var disqus_shortname = 'yourshortname';</code></pre>
         <p>This is your Disqus site shortname, and you can get it from your Disqus profile. </p>
         <pre class="prettyprint"><code>var disqus_identifier = 'yourdiscussionid';</code></pre>
         <p>This is the part that tells Disqus how to link up your page with the appropriate comment thread. Just make sure that you have a unique identifier per mockup, and you will be fine. </p>
-        <pre class="prettyprint"><code>var sd_path = 'path/to/build/sprawsm-discuss.css'</code></pre>
+        <pre class="prettyprint"><code>var sd_path = 'https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css'</code></pre>
         <p>This is the style sheet that adds the design to the whole thing. It's important to note that this path should be either absolute, or if you're using a relative path, make sure it is relative to the jquery.sprawsm-discuss.min.js file, and <strong>not</strong> your HTML page. </p>
         <p>If you've done everything correctly, you should be able to see the comment icon in the lower right corner of your browser widow, and the discussion should load without a problem.</p>
-        <h3>File Hosting</h3>
-        <p>If you don't have a web server or simply don't want to go through the hassle of hosting the files yourself, feel free to link directly to the files hosted by us: </p>
-        <p>The line of HTML needed to embed the JavaScript file: </p>
-        <pre class="prettyprint"><code>&lt;script type="text/javascript" src="https://s3.amazonaws.com/sprawsm/sprawsm-discussion/jquery.sprawsm-discuss.min.js"&gt;&lt;/script&gt;</code></pre>
-        <p>The path to the stylesheet: </p>
-        <pre class="prettyprint"><code>https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css</code></pre>
-        <p>The benefits of hosting the files yourself is the ability to modify the files, change the design, etc. </p>
 
       </div>
 
@@ -141,13 +161,11 @@
 
     <footer class="page-footer">
       <div class="grid">
-        <div class="col cs-6">
+        <div class="col cs-8 skip-2">
           <p class="lead">From <a href="http://sprawsm.com/">Superawesøme</a> with love.</p>
           <p>This code is provided as-is, without any warranty or guarantees. Sprawsm doo can not be held responsible for any damage or potential breach of privacy you may face by using this code. Sprawsm doo is not affiliated with Disqus in any way, we just like their awesome product. </p>
           <p>Superawesøme is a small, affordable interface design shop from Novi Sad, Serbia. Check out <a href="http://blog.sprawsm.com/">our blog</a>, <a href="http://sprawsm.com/portfolio/">portfolio</a>, and <a href="http://sprawsm.com/contact/">say hi</a> if you feel like it. We're also working on <a href="http://funnelnow.com/">Funnel</a>, a web application helping freelancers and small businesses handle work inquiries coming from their websites.</p>
           <p>Give respect and get it back.</p>
-        </div>
-        <div class="pad clear">
           <p class="icons"> 
             <a href="http://twitter.com/sprawsm" class="dsa"><span class="socicon">a</span></a>
             <a href="https://github.com/sprawsm" class="dsa"><span class="socicon">Q</span></a>
@@ -167,7 +185,7 @@
     
     <!-- Sprawsm Discuss code -->
 
-    <script type="text/javascript" src="build/jquery.sprawsm-discuss.min.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/sprawsm/sprawsm-discussion/jquery.sprawsm-discuss.min.js"></script>
     <script type="text/javascript">
 
       // Your Disqus site shortname
@@ -179,8 +197,19 @@
       // Path to stylesheet 
       // If you are using a relative path, make sure it's relative to 
       // jquery.sprawsm-discuss.js file and not this document
-      var sd_path = './build/sprawsm-discuss.css'
+      var sd_path = 'https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css';
 
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27948379-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
 
   </body>

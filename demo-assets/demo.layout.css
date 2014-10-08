@@ -194,7 +194,7 @@
    Elements that aren't columns but need alignment from the left
    ========================================================================== */
 
-.grid .pad      { margin-left: 28px;                     }
+.grid .pad      { margin-left: 28px; clear: both;        }
 .grid .col .pad { margin-left: 28px; margin-right: 28px; }
 
 
