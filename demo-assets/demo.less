@@ -266,6 +266,18 @@ h3 {
       100% { background-position: 0%   10% }
   }
 
+  a:not(.button):link,
+  a:not(.button):visited {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  a:not(.button):focus,
+  a:not(.button):hover {
+    border-color: transparent;
+    padding-bottom: 2px;
+  }
+
   &:after {
     content: "";
     display: block;
@@ -291,23 +303,11 @@ h3 {
   height: 22px;
   line-height: 22px;
 
-  > a:link,
-  > a:visited {
-    color: #fff;
-    border-bottom: 2px solid #fff;
-  }
-
-  > a:focus,
-  > a:hover {
-    padding-bottom: 3px;
-    border-color: transparent;
-  }
-
   .logo-sprawsm:link,
   .logo-sprawsm:visited {
     position: relative;
     top: 4px;
-    border: none;
+    border: none !important;
   }
 
 }
@@ -332,6 +332,10 @@ h3 {
 
 .hero-action {
   margin-bottom: 50px;
+}
+
+.hero-footer {
+  font-size: .75em;
 }
 
 @media (max-width: 768px) {
