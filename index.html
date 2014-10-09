@@ -54,7 +54,7 @@
           Made proudly in Novi Sad by <a href="http://sprawsm.com/">Superawesøme</a>
         </div>
 
-        <div class="col cs-6 center-v">
+        <div class="col cs-6 center-v commentable">
           <div class="hero-logo">
             <svg width="60px" height="60px" viewBox="0 0 60 60">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -196,9 +196,13 @@
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script type="text/javascript" src="demo-assets/demo.js"></script>
     
+    <!-- Inline Disqussions code -->
+
+    <script type="text/javascript" src="build/jquery.inlineDisqussions.min.js"></script>
+
     <!-- Sprawsm Discuss code -->
 
-    <script type="text/javascript" src="https://s3.amazonaws.com/sprawsm/sprawsm-discussion/jquery.sprawsm-discuss.min.js"></script>
+    <script type="text/javascript" src="build/jquery.sprawsm-discuss.min.js"></script>
     <script type="text/javascript">
 
       // Your Disqus site shortname
@@ -207,10 +211,23 @@
       // Unique discussion ID
       var disqus_identifier = 'sprawsmdiscussdemo';
 
-      // Path to stylesheet 
+      // Path to Sprawsm Discussions stylesheet 
       // If you are using a relative path, make sure it's relative to 
       // jquery.sprawsm-discuss.js file and not this document
-      var sd_path = 'https://s3.amazonaws.com/sprawsm/sprawsm-discussion/sprawsm-discuss.css';
+      var sd_path = 'build/sprawsm-discuss.css';
+
+      // Path to Inline Disqussions stylesheet
+      var id_path = 'build/inlineDisqussions.css';
+
+      // Initialize Inline Disqussions
+      $('.commentable').inlineDisqussions({
+        identifier: 'annotation',
+        displayCount: true,
+        highlighted: false,
+        position: 'right',
+        background: 'white',
+        maxWidth: 400
+      });
 
     </script>
 

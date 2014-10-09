@@ -6,7 +6,11 @@
 
   $(document).ready(function() {
 
-    // Append the stylesheet
+    // Append Inline Disqussions stylesheet
+
+    $('head').append('<link rel="stylesheet" href="'+id_path+'" type="text/css" />');
+
+    // Append Superawesome Discussions stylesheet
 
     $('head').append('<link rel="stylesheet" href="'+sd_path+'" type="text/css" />');
 
