@@ -14,7 +14,7 @@
 
     $('body').append('<div class="sd-controls" id="sd-controls">\
       <a class="sd-counter" id="sd-counter" href="#disqus_thread" data-disqus-identifier="'+disqus_identifier+'"></a>\
-      <a href="#" id="sd-toggle" class="sd-toggle closed" title="Toggle discussion pane">\
+      <a href="#sd-container" id="sd-toggle" class="sd-toggle" title="Toggle discussion pane">\
         <svg width="30px" height="30px" viewBox="0 0 30 30"><g id="icon-discussion" class="icon-discussion" fill="#000000"><path d="M3.93259844,20.2022047 C2.93482895,18.291905 2.37069693,16.1191762 2.37069693,13.8146515 C2.37069693,6.18335263 8.55572709,0 16.1853485,0 C23.8166474,0 30,6.18503017 30,13.8146515 C30,21.4459504 23.8149698,27.6293031 16.1853485,27.6293031 C13.8805838,27.6293031 11.7078905,27.0651486 9.79771779,26.0674274 L1,29 L3.93259844,20.2022047 L3.93259844,20.2022047 Z M9.89408659,8.89408659 L9.89408659,10.8940866 L23.0183105,10.8940866 L23.0183105,8.89408659 L9.89408659,8.89408659 Z M9.89408659,12.8940866 L9.89408659,14.8940866 L23.0183105,14.8940866 L23.0183105,12.8940866 L9.89408659,12.8940866 Z M9.89408659,16.8940866 L9.89408659,18.8940866 L17,18.8940866 L17,16.8940866 L9.89408659,16.8940866 Z" id="bar"></path></g></svg>\
         <span>Toggle discussion pane</span>\
       </a>\
@@ -32,10 +32,21 @@
 
     // Toggle the discussion pane on click
 
-    sd_toggle.on('click',function() {
+    sd_toggle.click(function() {
       sd_container.toggleClass('show');
       sd_controls.toggleClass('open');
       return false;
+    });
+
+    // Hide on click outside the panel
+    
+    $(document).click(function() {
+      sd_container.removeClass('show');
+      sd_controls.removeClass('open');
+    });
+
+    sd_container.click(function(event){
+        event.stopPropagation();
     });
 
     // Pass the clicks from .sd_counter to #sd-toggle
@@ -46,6 +57,7 @@
     });
 
     // Sync our hover states
+
     sd_toggle.hover(function() {
       sd_counter.toggleClass('hover');
     });

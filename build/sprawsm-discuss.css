@@ -9,24 +9,18 @@
   right: 0;
   z-index: 999;
   width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   background-color: #fff;
-  transition: all .15s ease;
+  -webkit-transition: all .15s ease;
+          transition: all .15s ease;
 }
 .sd-container.show {
   left: 0;
   border-radius: 0;
   border-color: #000;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
-}
-@media (min-width: 992px) {
-  .sd-container {
-    width: 60%;
-  }
-  .sd-container.show {
-    left: 40%;
-  }
 }
 @media (min-width: 1280px) {
   .sd-container {
@@ -36,6 +30,14 @@
     left: 60%;
   }
 }
+@media (min-width: 992px) {
+  .sd-container {
+    width: 60%;
+  }
+  .sd-container.show {
+    left: 40%;
+  }
+}
 .sd-controls {
   width: 30px;
   height: 30px;
@@ -43,7 +45,8 @@
   bottom: 10px;
   right: 10px;
   z-index: 1000;
-  transition: all .25s ease;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
 }
 .sd-controls.open {
   right: 10px;
@@ -52,14 +55,14 @@
 .icon-discussion {
   fill: #000000;
 }
-@media (min-width: 992px) {
-  .sd-controls.open {
-    right: 60%;
-  }
-}
 @media (min-width: 1280px) {
   .sd-controls.open {
     right: 40%;
+  }
+}
+@media (min-width: 992px) {
+  .sd-controls.open {
+    right: 60%;
   }
 }
 .sd-counter {
@@ -70,7 +73,8 @@
   min-width: 17px;
   padding: 0 3px;
   text-align: right;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   display: block;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 10px;
@@ -106,4 +110,5 @@
   display: block;
   height: 100%;
   overflow: auto;
+  padding-right: 10px;
 }

@@ -24,8 +24,8 @@
 @panel-width-lg:       40%;
 @panel-position-lg:    60%;
 
-@breakpoint-md:        min-width: 992px;
-@breakpoint-lg:        min-width: 1280px;
+@breakpoint-md:        992px;
+@breakpoint-lg:        1280px;
 
 // Container
 // --------------------
@@ -38,7 +38,7 @@
   right: 0;
   z-index: 999;
   width: @panel-width-sm;
-  padding: 10px;
+  padding: 0 0 0 10px;
   box-sizing: border-box;
   background-color: #fff;
   transition: all .15s ease;
@@ -53,20 +53,7 @@
 
 }
 
-@media (@breakpoint-md) {
-
-  .sd-container {
-    width: @panel-width-md;
-
-    &.show {
-      left: @panel-position-md;
-    }
-
-  }
-
-}
-
-@media (@breakpoint-lg) {
+@media (min-width: @breakpoint-lg) {
 
   .sd-container {
     width: @panel-width-lg;
@@ -77,6 +64,19 @@
 
   }
   
+}
+
+@media (min-width: @breakpoint-md) {
+
+  .sd-container {
+    width: @panel-width-md;
+
+    &.show {
+      left: @panel-position-md;
+    }
+
+  }
+
 }
 
 
@@ -104,18 +104,18 @@
   fill: @toggle-bg;
 }
 
-@media (@breakpoint-md) {
+@media (min-width: @breakpoint-lg) {
 
   .sd-controls.open {
-    right: @panel-width-md;
+    right: @panel-width-lg;
   }
   
 }
 
-@media (@breakpoint-md) {
+@media (min-width: @breakpoint-md) {
 
   .sd-controls.open {
-    right: @panel-width-lg;
+    right: @panel-width-md;
   }
   
 }
@@ -188,6 +188,7 @@
     display: block;
     height: 100%;
     overflow: auto;
+    padding-right: 10px;
   }
 
 }
